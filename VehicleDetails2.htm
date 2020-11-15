@@ -1,0 +1,65 @@
+﻿{#foreach $T as data}
+<div class="plan" id="div_vehcieldetails">
+    <ul>
+        <li class="title">{ $T.data.vehicleno}</li>
+          <li class="price">Odometer <span class="odometer">{ $T.data.odometer}</span> </li>
+        <li ><span class="vehiclemake">{ $T.data.vehiclemake}</span> Make </li>
+        <li ><span class="vehiclemodel">{ $T.data.vehiclemodel}</span> Model</li>
+
+        <li><span class="vehicletype">{ $T.data.vehicletype}</span> Vehicle Type </li>
+        <li><span class="Capacity">{ $T.data.Capacity}</span> Capacity </li>
+        <li><span class="FuelCapacity">{ $T.data.FuelCapacity}</span> Fuel Capacity </li>
+        <li><span class="EngineNo">{ $T.data.EngineNo}</span> EngineNo </li>
+        <li><span class="ChasisNo">{ $T.data.ChasisNo}</span> ChasisNo </li>
+        {#if $T.data.InsExpcolor == 'Red'}
+        <li class="InsExpDate" style="background: Red; color: #FFFFFF;"><span class="Ins_exp">
+            { $T.data.InsExpDate}</span> InsExpDate </li>
+        {#elseif $T.data.InsExpcolor == 'orange'}
+        <li class="InsExpDate" style="background: orange; color: #FFFFFF;"><span class="Ins_exp">
+            { $T.data.InsExpDate}</span> InsExpDate </li>
+        {#else}
+        <li class="InsExpDate"><span class="Ins_exp">{ $T.data.InsExpDate}</span> InsExpDate
+            </li>
+        {#/if} {#if $T.data.PolExpcolor == 'Red'}
+        <li class="PolExpDate" style="background: Red; color: #FFFFFF;"><span class="Pol_exp">
+            { $T.data.PolExpDate}</span> PolExpDate </li>
+        {#elseif $T.data.PolExpcolor == 'orange'}
+        <li class="PolExpDate" style="background: orange; color: #FFFFFF;"><span class="Pol_exp">
+            { $T.data.PolExpDate}</span> PolExpDate </li>
+        {#else}
+        <li class="PolExpDate"><span class="Pol_exp">{ $T.data.PolExpDate}</span> PolExpDate
+        </li>
+        {#/if} {#if $T.data.FitExpcolor == 'Red'}
+        <li class="FitExpDate" style="background: Red; color: #FFFFFF;"><span class="fit_exp">
+            { $T.data.FitExpDate}</span> FitExpDate </li>
+        {#elseif $T.data.FitExpcolor == 'orange'}
+        <li class="FitExpDate" style="background: orange; color: #FFFFFF;"><span class="fit_exp">
+            { $T.data.FitExpDate}</span> FitExpDate </li>
+        {#else}
+        <li class="FitExpDate"><span class="fit_exp">{ $T.data.FitExpDate}</span> FitExpDate
+        </li>
+        {#/if} {#if $T.data.RoadTaxExpcolor == 'Red'}
+        <li class="RoadTaxExpDate" style="background: Red; color: #FFFFFF;"><span class="roadtax_exp">
+            { $T.data.RoadTaxExpDate}</span> RoadTaxExpDate </li>
+        {#elseif $T.data.RoadTaxExpcolor == 'orange'}
+        <li class="RoadTaxExpDate" style="background: orange; color: #FFFFFF;"><span class="roadtax_exp">
+            { $T.data.RoadTaxExpDate}</span>
+        RoadTaxExpDate {#else}
+        <li class="RoadTaxExpDate"><span class="roadtax_exp">{ $T.data.RoadTaxExpDate}</span>
+            RoadTaxExpDate </li>
+        {#/if} {#if $T.data.RCExpcolor == 'Red'}
+        <li class="RCExpDate" style="background: Red; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.RCExpDate}</span> PermittExpDate </li>
+        {#elseif $T.data.RCExpcolor == 'orange'}
+        <li class="RCExpDate" style="background: orange; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.RCExpDate}</span>
+        PermittExpDate {#else}
+        <li class="RCExpDate"><span class="permit_exp">{ $T.data.RCExpDate}</span> PermittExpDate
+        </li>
+        {#/if}
+        <!--  <li class="button">
+        <input type="button" Value="{ $T.data.despsno }" onclick="btnShowRouteDetails(this)" class="btn btn-large" style="width:40px;height:28px;font-size:18px;cursor:pointer;"/><span>Route Details</span>
+        </li>-->
+    </ul>
+</div>
+{#/for} 

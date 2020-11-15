@@ -1,0 +1,115 @@
+﻿{#foreach $T as data}
+<div class="plan" id="div_vehcieldetails">
+    <ul>
+        <li class="title">{ $T.data.vehicleno}</li>
+        <li class="price"><span class="vehiclemake">{ $T.data.vehiclemake}</span> Make </li>
+        <li><span class="vehicletype">{ $T.data.vehicletype}</span> Vehicle Type </li>
+        <li><span class="Capacity">{ $T.data.Capacity}</span> Capacity </li>
+        {#if $T.data.EOCColor == 'Red'}
+        <li class="EOC" style="background: Red; color: #FFFFFF;"><span class="Ins_exp">{ $T.data.EOC}</span>
+            EOC </li>
+        {#elseif $T.data.EOCColor == 'orange'}
+        <li class="EOC" style="background: orange; color: #FFFFFF;"><span class="Ins_exp">{
+            $T.data.EOC}</span> EOC </li>
+        {#else}
+        <li class="EOC"><span class="Ins_exp">{ $T.data.EOC}</span> EOC </li>
+        {#/if} {#if $T.data.GOCColor == 'Red'}
+        <li class="GOC" style="background: Red; color: #FFFFFF;"><span class="Pol_exp">{ $T.data.GOC}</span>
+            GOC </li>
+        {#elseif $T.data.GOCColor == 'orange'}
+        <li class="GOC" style="background: orange; color: #FFFFFF;"><span class="Pol_exp">{
+            $T.data.GOC}</span> GOC </li>
+        {#else}
+        <li class="GOC"><span class="Pol_exp">{ $T.data.GOC}</span> GOC </li>
+        {#/if} {#if $T.data.AFCColor == 'Red'}
+        <li class="AFC" style="background: Red; color: #FFFFFF;"><span class="fit_exp">{ $T.data.AFC}</span>
+            AFC </li>
+        {#elseif $T.data.AFCColor == 'orange'}
+        <li class="AFC" style="background: orange; color: #FFFFFF;"><span class="fit_exp">{
+            $T.data.AFC}</span> AFC </li>
+        {#else}
+        <li class="AFC"><span class="fit_exp">{ $T.data.AFC}</span> AFC </li>
+        {#/if} {#if $T.data.OFCColor == 'Red'}
+        <li class="OFC" style="background: Red; color: #FFFFFF;"><span class="roadtax_exp">{
+            $T.data.OFC}</span> OFC </li>
+        {#elseif $T.data.OFCColor == 'orange'}
+        <li class="OFC" style="background: orange; color: #FFFFFF;"><span class="roadtax_exp">
+            { $T.data.OFC}</span>
+        OFC {#else}
+        <li class="OFC"><span class="roadtax_exp">{ $T.data.OFC}</span> OFC </li>
+        {#/if} {#if $T.data.brakefluidColor == 'Red'}
+        <li class="BrakeFluid" style="background: Red; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.brakefluid}</span> Brake Fluid </li>
+        {#elseif $T.data.brakefluidColor == 'orange'}
+        <li class="BrakeFluid" style="background: orange; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.brakefluid}</span>
+        BrakeFluid {#else}
+        <li class="BrakeFluid"><span class="permit_exp">{ $T.data.brakefluid}</span> Brake Fluid
+        </li>
+        {#/if} {#if $T.data.powersteeringfluidColor == 'Red'}
+        <li class="SteeringFluid" style="background: Red; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.powersteeringfluid}</span> SteeringFluid </li>
+        {#elseif $T.data.powersteeringfluidColor == 'orange'}
+        <li class="SteeringFluid" style="background: orange; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.powersteeringfluid}</span>
+        SteeringFluid {#else}
+        <li class="SteeringFluid"><span class="permit_exp">{ $T.data.powersteeringfluid}</span> SteeringFluid
+        </li>
+        {#/if} {#if $T.data.transmissionfluidColor == 'Red'}
+        <li class="TransmissionFluid" style="background: Red; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.transmissionfluid}</span> TransmissionFluid </li>
+        {#elseif $T.data.transmissionfluidColor == 'orange'}
+        <li class="TransmissionFluid" style="background: orange; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.transmissionfluid}</span>
+        TransmissionFluid {#else}
+        <li class="TransmissionFluid"><span class="permit_exp">{ $T.data.transmissionfluid}</span>
+            TransmissionFluid </li>
+        {#/if} {#if $T.data.washerfluidColor == 'Red'}
+        <li class="WasherFluid" style="background: Red; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.washerfluid}</span> WasherFluid </li>
+        {#elseif $T.data.washerfluidColor == 'orange'}
+        <li class="WasherFluid" style="background: orange; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.washerfluid}</span>
+        WasherFluid {#else}
+        <li class="WasherFluid"><span class="permit_exp">{ $T.data.washerfluid}</span> WasherFluid
+        </li>
+        {#/if} {#if $T.data.checkbrakesColor == 'Red'}
+        <li class="BrakesBearings" style="background: Red; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.checkbrakes}</span> BrakesBearings </li>
+        {#elseif $T.data.checkbrakesColor == 'orange'}
+        <li class="BrakesBearings" style="background: orange; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.checkbrakes}</span>
+        BrakesBearings {#else}
+        <li class="BrakesBearings"><span class="permit_exp">{ $T.data.checkbrakes}</span>
+            BrakesBearings </li>
+        {#/if} {#if $T.data.checkleaksColor == 'Red'}
+        <li class="CheckLeaks" style="background: Red; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.checkleaks}</span> CheckLeaks </li>
+        {#elseif $T.data.checkleaksColor == 'orange'}
+        <li class="CheckLeaks" style="background: orange; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.checkleaks}</span>
+        CheckLeaks {#else}
+        <li class="CheckLeaks"><span class="permit_exp">{ $T.data.checkleaks}</span> CheckLeaks
+        </li>
+        {#/if} {#if $T.data.allbeltsColor == 'Red'}
+        <li class="AllBelts" style="background: Red; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.allbelts}</span> AllBelts </li>
+        {#elseif $T.data.allbeltsColor == 'orange'}
+        <li class="AllBelts" style="background: orange; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.allbelts}</span>
+        AllBelts {#else}
+        <li class="AllBelts"><span class="permit_exp">{ $T.data.allbelts}</span> AllBelts
+        </li>
+        {#/if} {#if $T.data.lubricatechassisColor == 'Red'}
+        <li class="LubricateChassis" style="background: Red; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.lubricatechassis}</span> LubricateChassis </li>
+        {#elseif $T.data.lubricatechassisColor == 'orange'}
+        <li class="LubricateChassis" style="background: orange; color: #FFFFFF;"><span class="permit_exp">
+            { $T.data.lubricatechassis}</span>
+        LubricateChassis {#else}
+        <li class="LubricateChassis"><span class="permit_exp">{ $T.data.lubricatechassis}</span>
+            LubricateChassis </li>
+        {#/if}
+    </ul>
+</div>
+{#/for} 
